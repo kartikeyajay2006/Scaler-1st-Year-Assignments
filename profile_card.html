@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Card</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f4f8;
+        }
+
+        .profile {
+            background-color: #1f2937;
+            width: 380px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 15px auto;
+            border: 4px solid #00f0ffcc;
+            object-fit: cover;
+            background-color: #111827;
+        }
+
+        .image:hover {
+            transform: Scale(1.20);
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: #00e0ff;
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+            animation: name_size 2s infinite;
+        }
+
+        @keyframes name_size {
+            0%,100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .name:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px #00c4cc;
+        }
+
+
+        .about {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.4;
+            padding: 0 15px;
+            color: #cbd5e1;
+        }
+
+        .skills {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            min-height: 30px;
+            position: relative;
+        }
+
+        .skills::after {
+            content: "Artificial Intelligence";
+            animation: skillChange 10s infinite;
+            color: #00f0ff;
+            text-shadow: 0 0 10px #00f0ff;
+        }
+
+        @keyframes skillChange {
+            0% {
+                content: "Artificial Intelligence";
+                color: #00f0ff;
+                text-shadow: 0 0 10px #00f0ff;
+            }
+
+            20% {
+                content: "Machine Learning";
+                color: #7fff00;
+                text-shadow: 0 0 10px #7fff00;
+            }
+            40% {
+                content: "Generative AI";
+                color: #ff6f61;
+                text-shadow: 0 0 10px #ff6f61;
+            }
+            60% {
+                content: "Python";
+                color: #f1c40f;
+                text-shadow: 0 0 10px #f1c40f;
+            }
+            80% {
+                content: "SQL / Java / Web Dev";
+                color: #9b59b6;
+                text-shadow: 0 0 10px #9b59b6;
+            }
+            100% {
+                content: "Artificial Intelligence";
+                color: #00f0ff;
+                text-shadow: 0 0 10px #00f0ff;
+            }
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn {
+            background: #00f0ff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            cursor: pointer;
+            box-shadow: 0 0 8px #00f0ffaa;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00c4cc;
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .profile {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .image {
+                height: 120px;
+                width: 120px;
+            }
+            .name {
+                font-size: 22px;
+            }
+            .about {
+                font-size: 14px;
+            }
+            .skills {
+                font-size: 16px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <img class="image" src="profile.png" alt="profile_image" />
+        <div class="name">Kartikeya Yadav</div>
+        <div class="about">
+            <p>Hello! I'm Kartikeya, a college student starting my journey in frontend development. I love coding,
+                learning new skills, and building creative projects.</p>
+        </div>
+        <div class="skills"></div>
+        <div class="buttons">
+            <button class="btn">Download Portfolio</button>
+            <button class="btn">Contact</button>
+        </div>
+    </div>
+</body>
+
+</html>

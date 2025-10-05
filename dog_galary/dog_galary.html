@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dog Gallery</title>
+  <style>
+    body {
+      background-color: rgb(242, 204, 54);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bolder;
+      color: rgb(250, 9, 9);
+      text-shadow: 0px 0px 2px red;
+    }
+
+    h1:hover {
+      transform: Scale(1.2);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 300px);
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border: 6px solid black;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 180px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .caption:hover {
+      transform: Scale(1.2);
+      color: coral;
+    }
+
+    img:hover {
+      box-shadow: 0px 0px 15px salmon;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+  <h1>Dog Gallery</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Afghan Hound.jpg" alt="Afghan Hound" />
+      <div class="caption">Afghan Hound</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Labrador.webp" alt="Labrador" />
+      <div class="caption">Labrador</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Pomeranian.webp" alt="Pomeranian" />
+      <div class="caption">Pomeranian</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Dalmatian.jpg" alt="Dalmatian" />
+      <div class="caption">Dalmatian</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Norfolk Terrier.avif" alt="Norfolk Terrier" />
+      <div class="caption">Norfolk Terrier</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Border Collie.webp" alt="Border Collie" />
+      <div class="caption">Border Collie</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Golden Retriever.webp" alt="Golden Retriever" />
+      <div class="caption">Golden Retriever</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Beagle.jpg" alt="Beagle" />
+      <div class="caption">Beagle</div>
+    </div>
+    <div class="gallery-item">
+      <img src="German Shepherd.jpg" alt="German Shepherd" />
+      <div class="caption">German Shepherd</div>
+    </div>
+
+  </div>
+</body>
+
+</html>

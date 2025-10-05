@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="moon_orbit"></div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon orbit</title>
+</head>
+<style>
+    body {
+        background-image: url(space.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        height: 1200px;
+        width: 2200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .earth {
+        background-image: url(earth.webp);
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+        margin: 100px;
+        box-shadow: 0px 0px 35px darkblue;
+    }
+
+    .orbit {
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        animation: spin 4s linear infinite;
+    }
+
+    .moon {
+        background-image: url(moon.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100px;
+        width: 100px;
+        border: 5px solid grey;
+        border-radius: 50%;
+        box-shadow: 0 0 35px rgb(53, 52, 52);
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="earth">
+        </div>
+        <div class="orbit">
+            <div class="moon"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
